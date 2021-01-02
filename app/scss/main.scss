@@ -264,6 +264,7 @@ p {
 
   &__list {
     display: flex;
+    @include lst;
   }
 
   &__item {
