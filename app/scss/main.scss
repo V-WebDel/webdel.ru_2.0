@@ -1,0 +1,163 @@
+@import 'vars';
+@import 'mixins';
+
+
+::placeholder {
+  color: #666;
+}
+  
+::selection {
+  background-color: $accent;
+  color: #fff;
+}
+  
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, ::before, ::after {
+  box-sizing: inherit;
+}
+  
+body{
+  position: relative;
+  min-width: 320px;
+  overflow-x: hidden;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: $font-default;
+  line-height: 1.4;
+  color: $blue;
+  
+  input, textarea {
+    border: #666 1px solid;
+    outline: none;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+  
+.btn {
+  display: block;
+  padding: 10px 40px;
+  font-weight: 400;
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: $accent;
+  border: 2px solid #ffffff;
+  border-radius: 30px;
+  transition: $slowdown;
+  cursor: pointer;
+  
+  &:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: rgba(#ffffff, 0.1);
+  }
+}
+   
+h1, h2, h3, h4 {
+  margin-top: 0;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+p {
+  margin-top: 0;
+}
+  
+.title-text {
+  position: relative;
+  margin-bottom: 0;
+  font-size: 24px;
+  font-family: $font-accent;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+}
+  
+.text-accent {
+  color: $accent;
+}
+
+.text-black {
+  font-weight: 900;
+}
+  
+.text-nowrap {
+  white-space: nowrap;
+}
+
+@import 'animation';
+  
+
+/* grid */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @include desktop {
+    max-width: 960px;
+  }
+
+  @include laptop {
+    max-width: 760px;
+    padding: 0 10px;
+  }
+
+  @include tablets {
+    max-width: 540px;
+  }
+
+  @include phones {
+    max-width: 320px;
+  }
+}
+
+.section {
+  padding-top: 60px;
+
+  @include laptop {
+    padding-top: 50px;
+  }
+
+  @include tablets {
+    padding-top: 40px;
+  }
+
+  @include phones {
+    padding-top: 30px;
+  }
+}
+
+/* header */
+
+
+/* section */
+/* section */
+/* section */
+
+
+/* footer */
