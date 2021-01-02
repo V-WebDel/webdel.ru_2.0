@@ -1,17 +1,17 @@
-@keyframes zoom {
+@keyframes hover-svg {
   0% {
     transform: scale(1)
   }
-  14% {
-    transform: scale(1.25)
-  } 
-  28% {
-    transform: scale(1)
+  100% {
+    transform: scale(1.2)
   }
-  42% {
-    transform: scale(1.25)
+}
+
+@keyframes hover-svg-revers {
+  0% {
+    transform: scale(1.2)
   }
-  70% {
+  100% {
     transform: scale(1)
   }
 }
