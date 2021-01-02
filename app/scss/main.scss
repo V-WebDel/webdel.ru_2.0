@@ -389,6 +389,45 @@ p {
   }
 }
 
+
+/* top */
+.top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 700px;
+  padding-top: 160px;
+  padding-bottom: 100px;
+  background-color: $blue;
+
+  &__wrap {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    color: $white;
+    text-align: center;
+  }
+
+  &__hello {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 24px;
+    font-family: $font-accent;
+
+    &_profession {
+      font-size: 70px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 70px;
+    font-weight: 400;
+    font-size: 28px;
+    font-family: $font-accent;
+    line-height: 1.2;
+  }
+}
+
 /* section */
 /* section */
 /* section */
