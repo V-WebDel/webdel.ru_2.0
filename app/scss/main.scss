@@ -3,12 +3,12 @@
 
 
 ::placeholder {
-  color: #666;
+  color: #adadad;
 }
   
 ::selection {
   background-color: $accent;
-  color: #fff;
+  color: $white;
 }
   
 html {
@@ -146,6 +146,7 @@ p {
 
 .section {
   padding-top: 60px;
+  padding-bottom: 40px;
 
   @include laptop {
     padding-top: 50px;
@@ -153,10 +154,12 @@ p {
 
   @include tablets {
     padding-top: 40px;
+    padding-bottom: 30px;
   }
 
   @include phones {
     padding-top: 30px;
+    padding-bottom: 20px;
   }
 }
 
@@ -577,7 +580,6 @@ p {
 
 /* advantages */
 .advantages {
-  padding-bottom: 40px;
 
   &__list {
     display: flex;
@@ -893,6 +895,236 @@ p {
       position: absolute;
       right: -12px;
       bottom: 0;
+    }
+  }
+}
+
+
+/* contacts */
+.contacts {
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__block {
+    width: 50%;
+
+    &_list {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    @include lst;
+    margin: 60px 0 60px 100px;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 50px;
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 1px;
+
+    &_phone {
+      &:hover {
+        svg {
+          animation-name: phone-ring;
+          animation-duration: 0.8s;
+          animation-iteration-count: 3;
+          animation-timing-function: ease;
+          animation-fill-mode: both;
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    margin-right: 5px;
+    fill: $blue;
+  }
+
+  &__link {
+    color: $blue;
+    text-decoration: none;
+
+    &:hover {
+      color: lighten($blue, 10%);
+      text-decoration: none;
+    }
+  }
+}
+
+
+/* form */
+.form {
+  position: relative;
+
+  &_callback {
+    width: 420px;
+    margin: 40px auto;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -75px;
+      top: 50%;
+      height: 70%;
+      width: 2px;
+      background-color: rgba($blue, 0.5);
+      transform: translateY(-50%);
+    }
+  }
+  
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 22px;
+    font-family: $font-accent;
+    text-align: center;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  &__field {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    font-weight: 500;
+    color: darken($blue, 10%);
+    border: 2px solid $accent;
+    border-radius: 10px;
+  }
+
+  &__textarea {
+    width: 100%;
+    height: 165px;
+    resize: none;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    font-weight: 500;
+    color: darken($blue, 10%);
+    border: 2px solid $accent;
+    border-radius: 10px;
+  }
+
+  &__btn {
+    margin-bottom: 15px;
+    padding: 18px 15px;
+
+    &:hover {
+      background-color: $blue;
+    }
+  }
+
+  &__checkbox {
+    position: relative;
+    position: relative;
+    display: block;
+    width: 300px;
+    margin: 0 auto 10px;
+    padding-left: 30px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.2;
+    color: #828282;
+    cursor: pointer;
+  
+    &_default {
+      display: none;
+  
+      &:checked + .form__checkbox_new {
+        svg {
+          display: block;
+        } 
+      }
+    }
+
+    &_new {
+      position: absolute;
+      left: 5px;
+      top: 0;
+      display: block;
+      width: 16px;
+      height: 16px;
+      margin-right: 9px;
+      border-radius: 4px;
+      border: 2px solid #dcdcdc;
+  
+      svg {
+        position: absolute;
+        left: 75%;
+        top: 30%;
+        display: none;
+        width: 20px;
+        height: 20px;
+        fill: $blue;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    a {
+      color: lighten($blue, 15%);
+      text-decoration: none;
+      transition: $slowdown;
+
+      &:hover {
+        color: darken($blue, 10%);
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__success {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    font-size: 26px;
+    font-family: $font-accent;
+    color: $accent;
+    text-transform: uppercase;
+    
+    span {
+      margin: auto;
+    }
+
+    & ~ * {
+      transition: all .5s ease;
+    }
+
+    &_active {
+      display: flex;
+
+      & ~ * {
+        opacity: .5;
+        filter: blur(3px);
+      }
     }
   }
 }

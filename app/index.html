@@ -296,8 +296,61 @@
   <section class="infographic">
     <div class="container"></div>
   </section>
-  <section class="contacts">
-    <div class="container"></div>
+  <section class="contacts section" id="contacts">
+    <div class="container">
+      <h3 class="title-text">Есть вопросы?</h3>
+      <div class="contacts__wrap">
+        <div class="contacts__block contacts__block_list">
+          <ul class="contacts__list">
+            <li class="contacts__item contacts__item_phone">
+              <span>
+                <svg class="contacts__svg">
+                  <use xlink:href="./img/sprite.svg#smartphone"></use>
+                </svg>
+              </span>
+              <a class="contacts__link" href="tel:89500122485">+7 (950) 012-24-85</a>
+            </li>
+            <li class="contacts__item">
+              <span>
+                <svg class="contacts__svg">
+                  <use xlink:href="./img/sprite.svg#email"></use>
+                </svg>
+              </span>viktor.webdel@gmail.com
+            </li>
+            <li class="contacts__item">
+              <span>
+                <svg class="contacts__svg">
+                  <use xlink:href="./img/sprite.svg#telegram"></use>
+                </svg>
+              </span>@viktorkryzhnyi
+            </li>
+          </ul>
+        </div>
+        <div class="contacts__block contacts__block_form">
+          <form class="form form_callback">
+            <div class="form__success">
+              <span>Спасибо за ваш вопрос!</span>
+              <span>Отвечу в ближайшее время</span>
+            </div>
+            <h4 class="form__title">Форма обратной связи</h4>
+            <div class="form__wrap">
+              <input class="form__field" name="name" type="text" placeholder="Ваше имя" required>
+              <input class="form__field" name="phone" type="tel" placeholder="Ваш телефон" required>
+              <textarea class="form__textarea" name="text" rows="6" placeholder="Ваш вопрос..."></textarea>
+              <button class="btn form__btn" type="submit">Отправить</button>
+            </div>
+            <label class="form__checkbox">
+              <input class="form__checkbox_default" type="checkbox" name="checkbox" value="ready" checked required>
+              <span class="form__checkbox_new">
+                <svg>
+                  <use xlink:href="./img/sprite.svg#check"></use>
+                </svg>
+              </span>Нажимая на кнопку, вы даете <a href="/personal.php">согласие на обработку своих персональных данных</a>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
   </section>
   <footer class="footer">
     <div class="container"></div>
