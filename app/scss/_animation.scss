@@ -92,4 +92,23 @@
     transform: translate3d(-5%, 0, 0) rotate(-1deg);
   }
 }
+
+
+@keyframes jump-btn {
+  0% {
+    transform: translateY(0) scaleY(0.8) scaleX(1.2)
+  }
+
+  40% {
+    transform: translateY(-30px)
+  }
+    
+  60% {
+    transform: translateY(-30px)
+  }
+
+  100% {
+    transform: translateY(0) scaleY(0.8) scaleX(1.2)
+  }
+}
   

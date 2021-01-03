@@ -32,6 +32,22 @@ $(function() {
     $(this).siblings("header").find(".menu").toggleClass("menu_fixed menu_hidden");
     return false;
   });
+
+
+  // Bottom up
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > $(this).height()) {
+      $(".btn-up").addClass("btn-up_active");
+    } else {
+      $(".btn-up").removeClass("btn-up_active");
+    }
+  });
+
+  $("body").on("click", ".btn-up", function () {
+    $("html, body").animate({
+      scrollTop: 0
+    }, "slow");
+  });
   
 
   // Skill animation
