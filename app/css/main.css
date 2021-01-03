@@ -84,7 +84,12 @@ strong {
 .btn:hover {
   color: #fff;
   text-decoration: none;
-  background-color: rgba(255,255,255,.1)
+  background-color: #0093bd
+}
+.btn:active {
+  -webkit-transform: scale(.95);
+  -ms-transform: scale(.95);
+  transform: scale(.95)
 }
 h1,
 h2,
@@ -105,6 +110,9 @@ p {
   line-height: 1.2;
   text-align: center;
   text-transform: uppercase
+}
+.title-text_reverse {
+  color: #fff
 }
 .text-accent {
   color: #00bbf0
@@ -844,5 +852,139 @@ p {
 .advantages__text {
   margin-bottom: 0;
   font-style: italic
+}
+.works {
+  padding-bottom: 50px;
+  text-align: center;
+  background-color: #005792
+}
+.works__link {
+  width: 340px;
+  margin: 0 auto;
+  font-size: 20px;
+  text-decoration: none
+}
+.works .swiper-container {
+  margin-top: 50px;
+  margin-bottom: 20px
+}
+.works .swiper-wrapper {
+  padding-bottom: 50px
+}
+.works .swiper-button-next,
+.works .swiper-button-prev {
+  top: auto;
+  bottom: 10px;
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease
+}
+.works .swiper-button-next::after,
+.works .swiper-button-prev::after {
+  display: none
+}
+.works .swiper-button-next svg,
+.works .swiper-button-prev svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  fill: #00bbf0;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%)
+}
+.works .swiper-button-prev {
+  left: 20%
+}
+.works .swiper-button-next {
+  right: 20%
+}
+.works .swiper-button-next svg {
+  -webkit-transform: translate(-50%,-50%) rotate(180deg);
+  -ms-transform: translate(-50%,-50%) rotate(180deg);
+  transform: translate(-50%,-50%) rotate(180deg)
+}
+.works .swiper-pagination {
+  bottom: 15px;
+  z-index: 1
+}
+.works .swiper-pagination-bullet {
+  margin: 0 6px!important;
+  background-color: #fff;
+  opacity: .8
+}
+.works .swiper-pagination-bullet-active {
+  background-color: #00bbf0;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5)
+}
+.work__item {
+  position: relative;
+  display: block;
+  width: 320px;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto 25px;
+  border: 4px solid #00bbf0
+}
+.work__item:hover .work__inner {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2)
+}
+.work__item:hover .work__inner::before {
+  background: rgba(255,255,255,.75)
+}
+.work__item:hover .work__name {
+  opacity: 1
+}
+.work__inner {
+  position: relative;
+  display: block;
+  background-color: #fff;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease
+}
+.work__inner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,.25);
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease
+}
+.work__name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-family: Nunito,Times,serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #005792;
+  text-align: center;
+  opacity: 0;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease
 }
 /*# sourceMappingURL=main.css.map */

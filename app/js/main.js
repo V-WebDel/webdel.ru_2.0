@@ -49,3 +49,41 @@ function handleMobilePhoneResize(e) {
 
 // Настраиваем слушателя событий
 mQuery.addListener(handleMobilePhoneResize)
+
+
+
+// Swiper Works
+var swiper_clinic = new Swiper('.swiper-works', {
+  speed: 1400,
+  spaceBetween: 0,
+  loop: true,
+
+  autoplay: {
+    delay: 5000,
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  breakpoints: {
+    992: { 
+      slidesPerView: 3,
+      centeredSlides: true,
+    }, 
+    576: { 
+      slidesPerView: 2,
+      centeredSlides: false,
+    },
+    320: { 
+      slidesPerView: 1,
+      centeredSlides: true,
+    }, 
+  },
+});
