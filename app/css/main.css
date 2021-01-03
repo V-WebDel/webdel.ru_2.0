@@ -987,4 +987,106 @@ p {
   -o-transition: all .3s ease;
   transition: all .3s ease
 }
+.resume {
+  padding-bottom: 60px
+}
+.resume__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 50px
+}
+.resume__foto {
+  width: 30%;
+  margin-top: 10px
+}
+.resume__info {
+  width: 70%;
+  padding-left: 70px
+}
+.resume__info p {
+  margin-bottom: 10px;
+  font-size: 20px
+}
+.resume__subtitle {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 28px;
+  font-family: Nunito,Times,serif;
+  line-height: 1
+}
+.resume__text {
+  margin-left: 50px;
+  margin-bottom: 10px;
+  font-size: 22px
+}
+.resume__skill {
+  margin: 30px;
+  margin-left: 50px;
+  margin-bottom: 40px;
+  margin-right: 0
+}
+.skill__text {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-family: Roboto,Arial,Helvetica,sans-serif
+}
+.skill__wrap {
+  position: relative;
+  height: 4px;
+  width: 100%;
+  margin-bottom: 30px;
+  background-color: rgba(0,187,240,.6)
+}
+.skill__wrap::after,
+.skill__wrap::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  height: 19px;
+  width: 6px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border-radius: 2px
+}
+.skill__wrap::before {
+  left: 0;
+  background-color: #005792
+}
+.skill__wrap::after {
+  right: 0;
+  background-color: #00bbf0
+}
+.skill__line {
+  position: absolute;
+  top: 50%;
+  height: 11px;
+  width: 0;
+  background-color: #005792;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%)
+}
+.skill__count {
+  position: absolute;
+  right: -8px;
+  bottom: -22px;
+  font-size: 16px;
+  font-family: Roboto,Arial,Helvetica,sans-serif;
+  color: #00bbf0
+}
+.skill__count::before {
+  content: '%';
+  position: absolute;
+  right: -12px;
+  bottom: 0
+}
 /*# sourceMappingURL=main.css.map */

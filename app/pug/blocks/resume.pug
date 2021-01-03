@@ -1,2 +1,43 @@
-section.resume
+section.resume.section#resume
   .container
+    h2.title-text Резюме
+    h3.resume__subtitle Общая информация:
+    .resume__block
+      .resume__foto
+        +image('resume/', '1', 'Фото frontend-разработчика', 'Frontend-разработчик', 'jpg')
+      .resume__info
+        p Создаю сайты уже более 3-х лет
+        p Специализируюсь на верстке посадочных страниц и многостраничных сайтов.
+        p Разрабатываю сайты на CMS WordPress.
+        p Создаю лендинги и сайты-портфолио по готовым макетам.
+        p На сайте представлены проекты, в разработке которых я принимал участие за последние два года.
+        p Веб-разработка для меня основная сфера деятельности, поэтому я с удовольствием изучаю новые технологии и стандарты.
+        p Более 2-х лет сотрудничаю с веб-студиями и маркетинговыми агентствами.
+
+    h3.resume__subtitle Мои навыки:
+      .resume__skill.skill
+        h4.skill__text HTML и CSS
+        .skill__wrap 
+          .skill__line.skill__line_htmlcss
+            span.skill__count 95
+        h4.skill__text jQuery и AJAX
+        .skill__wrap 
+          .skill__line.skill__line_jquery
+            span.skill__count 90
+        h4.skill__text WordPress
+        .skill__wrap 
+          .skill__line.skill__line_wp
+            span.skill__count 75
+        h4.skill__text JavaScript
+        .skill__wrap 
+          .skill__line.skill__line_js
+            span.skill__count 50
+        h4.skill__text PHP
+        .skill__wrap 
+          .skill__line.skill__line_php
+            span.skill__count 30
+
+    h3.resume__subtitle Используемые программы:
+    p.resume__text VS Code, Breackets, Photoshop, Figma, Avocode
+    h3.resume__subtitle При верстке использую:
+    p.resume__text Препроцессор SASS(SCSS), шаблонизатор PUG, методологию БЭМ, SVG-графику, GULP, <span class="text-nowrap">JS и CSS анимацию</span>
