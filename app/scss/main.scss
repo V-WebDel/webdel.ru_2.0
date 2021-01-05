@@ -684,7 +684,7 @@ p {
       z-index: 2;
       width: 30px;
       height: 30px;
-      transition: $slowdown;
+      transition: all 0.2s ease;
 
       &::after {
         display: none;
@@ -696,8 +696,19 @@ p {
         left: 50%;
         width: 30px;
         height: 30px;
-        fill: $accent;
+        fill: $white;
         transform: translate(-50%, -50%);
+        transition: $slowdown;
+      }
+
+      &:hover {
+        svg {
+          fill: $accent;
+        }
+      }
+
+      &:active {
+        transform: scale(0.9)
       }
     }
 
@@ -721,6 +732,11 @@ p {
         margin: 0 6px!important;
         background-color: $white;
         opacity: 0.8;
+        transition: $slowdown;
+
+        &:hover {
+          background-color: $accent;
+        }
 
         &-active {
           background-color: $accent;
@@ -747,7 +763,8 @@ p {
           transform: scale(1.2);
 
           &::before {
-            background: rgba($white, 0.75)
+            height: 100%;
+            background: rgba($white, 0.8)
           }
         }
         &__name {
@@ -766,13 +783,14 @@ p {
     &::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 50%;
+      left: 50%;
       z-index: 1;
       width: 100%;
-      height: 100%;
+      height: 0;
       background: rgba($white, 0.25);
-      transition: $slowdown;
+      transform: translate(-50%, -50%);
+      transition: all 0.4s ease;
     }
   }
 
@@ -1214,8 +1232,187 @@ p {
 }
 
 
-/* section */
-/* section */
+/* portfolio */
+.portfolio {
+  position: relative;
+  background-color: $blue;
+  color: $white;
+
+  &__wrap {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    @include lst;
+    margin: 50px 0 20px;
+  }
+
+  &__item {
+    position: relative;
+    display: block;
+    width: 260px;
+    min-height: 360px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    margin-left: 25px;
+    border: 4px solid $accent;
+
+    &:hover {
+      
+      .portfolio {
+        &__inner {
+          filter: blur(2px);
+
+          &::before {
+            height: 100%;
+            background: rgba($white, 0.6);
+          }
+        }
+
+        &__name {
+          opacity: 1
+        }
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__inner {
+    position: relative;
+    display: block;
+    background-color: $white;
+    transition: all 0.4s ease;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+      width: 100%;
+      height: 0;
+      background: rgba($white, 0.1);
+      transform: translate(-50%, -50%);
+      transition: $slowdown;
+    }
+  }
+
+  &__name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: $font-accent;
+    line-height: 1.2;
+    color: $blue;
+    text-align: center;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: $slowdown;
+  }
+}
+
+
+/* project */
+.project {
+
+  &__title-text {
+    text-transform: none;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+
+  &__block {
+    &_left {
+      width: 50%;
+    }
+    &_center {
+      width: 140px;
+      min-height: 2000px;
+    }
+    &_right {
+      width: 360px;
+      min-height: 1000px;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-family: $font-accent;
+  }
+
+  &__subtitle {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-family: $font-accent;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    margin-left: 30px;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      @include lst;
+    }
+
+    li {
+      position: relative;
+      margin-bottom: 10px;
+      padding-left: 15px;
+      font-size: 18px;
+      line-height: 1.3;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 0;
+        width: 7px;
+        height: 7px;
+        background-color: $accent;
+        border-radius: 50%;
+      }
+    }
+
+    a {
+      font-size: 22px;
+      font-weight: 700;
+      font-family: $font-accent;
+      color: $accent;
+      text-decoration: none;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: darken($accent, 20%);
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__image {
+    margin: 0 auto;
+    border: 3px solid $accent;
+  }
+}
 
 
 /* footer */
