@@ -12,7 +12,7 @@ $(function() {
 
     if (width > 768) {
 
-      $(this).scroll(function () {
+      $(this).on("scroll", function () {
         if ($(this).scrollTop() > 200) {
           $(".menu").addClass("menu_fixed");
         } else if ($(this).scrollTop() < 200) {
@@ -27,7 +27,7 @@ $(function() {
   
   
 	// Open & close menu
-  $(".toggle-menu").click(function () {
+  $(".toggle-menu").on("click", function () {
     $(this).toggleClass("toggle-menu_open");
     $(this).siblings("header").find(".menu").toggleClass("menu_fixed menu_hidden");
     return false;
@@ -35,7 +35,7 @@ $(function() {
 
 
   // Bottom up
-  $(window).scroll(function () {
+  $(window).on("scroll", function () {
     if ($(this).scrollTop() > $(this).height()) {
       $(".btn-up").addClass("btn-up_active");
     } else {
@@ -54,7 +54,7 @@ $(function() {
   let block_scroll = $(".skill");
   let counter = 0;
 
-  $(window).scroll(function() {
+  $(window).on("scroll", function() {
 
     let scroll = $(window).scrollTop() + $(window).height();
     let offset = block_scroll.offset().top + 200;
@@ -89,9 +89,11 @@ mQuery.addListener(handleMobilePhoneResize)
 
 
 
+
+
 // Swiper Works
 var swiper_clinic = new Swiper('.swiper-works', {
-  speed: 1400,
+  speed: 1000,
   spaceBetween: 0,
   loop: true,
 
