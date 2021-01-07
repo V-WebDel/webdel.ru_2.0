@@ -1503,10 +1503,7 @@ p {
   align-items: center;
   width: 270px;
   padding: 40px 20px;
-  border-radius: 10px;
-  -webkit-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  transition: all .3s ease
+  border-radius: 10px
 }
 .infographic__item:hover {
   background-color: rgba(255,255,255,.1);

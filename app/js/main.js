@@ -71,24 +71,114 @@ $(function() {
   
 });
 
-/* Javascript */
 
-// Этот медиа-запрос нацелен на области просмотра, которые имеют минимальную ширину 320 пикселей
-const mQuery = window.matchMedia('(min-width: 540px)')
+// Animation from GSAP
+gsap.registerPlugin(ScrollTrigger);
 
-function handleMobilePhoneResize(e) {   
-   // Проверяем, верен ли медиа-запрос
-	if (e.matches) {     
-		// Затем выводим в консоль следующее сообщение
-		console.log('Media Query Matched!')   
-	} 
-} 
-
-// Настраиваем слушателя событий
-mQuery.addListener(handleMobilePhoneResize)
+var tl = gsap.timeline();
+tl.from(".top__hello", {duration: 0.7, delay: 1, opacity: 0, y: 70, ease: "power1"});
+tl.from(".top__profession", {duration: 0.6, opacity: 0, y: 70, ease: "power1"});
+tl.from(".top__text", {duration: 0.6, opacity: 0, y: 70, ease: "power1"});
 
 
+gsap.from(".advantages__item", {
+  scrollTrigger: {
+    trigger: ".advantages",
+		toggleActions: "play none none none",
+		start: "top 50%",
+	}, 
+	duration: 1.2,
+  y: 250,
+  opacity: 0,
+	stagger: 0.3,
+  ease: "power1",
+});
 
+gsap.from(".works__link", {
+  scrollTrigger: {
+    trigger: ".works",
+		toggleActions: "play none none none",
+    start: "bottom 90%",
+	}, 
+	duration: 1.5,
+  scale: 0,
+  ease: "bounce",
+});
+
+gsap.from(".resume__foto", {
+  scrollTrigger: {
+		trigger: ".resume__block",
+		toggleActions: "play none none none",
+    start: "top 80%",
+	}, 
+	duration: 1.5,
+	xPercent: -200,
+	opacity: 0,
+  ease: "power1",
+});
+
+gsap.from(".resume__info", {
+  scrollTrigger: {
+    trigger: ".resume__block",
+		toggleActions: "play none none none",
+		start: "top 80%",
+	}, 
+	duration: 1.5,
+	xPercent: 200,
+	opacity: 0,
+  ease: "power1",
+});
+
+gsap.from(".infographic__item", {
+  scrollTrigger: {
+    trigger: ".infographic",
+		toggleActions: "play none none none",
+		start: "top 60%",
+	}, 
+	duration: 1.2,
+  y: 200,
+  opacity: 0,
+	stagger: 0.4,
+  ease: "power1",
+});
+
+gsap.from(".contacts__item", {
+  scrollTrigger: {
+    trigger: ".contacts",
+		toggleActions: "play none none none",
+		start: "top 50%",
+	}, 
+	duration: 2,
+  x: 200,
+  opacity: 0,
+	stagger: 0.4,
+  ease: "expo",
+});
+
+gsap.from(".form_callback", {
+  scrollTrigger: {
+    trigger: ".contacts",
+		toggleActions: "play none none none",
+		start: "top 50%",
+	}, 
+	duration: 2,
+  y: 250,
+  opacity: 0,
+  ease: "expo",
+});
+
+gsap.from(".portfolio__item", {
+  scrollTrigger: {
+    trigger: ".portfolio",
+		toggleActions: "play none none none",
+		start: "top 70%",
+	}, 
+	duration: 1.5,
+  y: 250,
+  opacity: 0,
+	stagger: 0.4,
+  ease: "power1",
+});
 
 
 // Swiper Works
