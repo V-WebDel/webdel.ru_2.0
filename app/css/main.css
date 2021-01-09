@@ -22,6 +22,7 @@
   color: #fff
 }
 html {
+  overflow-x: hidden;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   scroll-behavior: smooth
@@ -35,7 +36,7 @@ html {
 body {
   position: relative;
   min-width: 320px;
-  overflow-x: hidden;
+  overflow: hidden;
   font-weight: 400;
   font-size: 16px;
   font-family: Roboto,Arial,Helvetica,sans-serif;
@@ -641,13 +642,66 @@ p {
 }
 @media screen and (max-width:768px) {
   .menu {
-    display: none
-  }
-  .menu_fixed {
-    display: block;
+    display: none;
+    position: fixed;
     bottom: auto;
     top: 80px;
     right: 25px
+  }
+  .menu_show {
+    display: block
+  }
+  .menu__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 10px 0;
+    background-color: #005792;
+    border-radius: 15px;
+    border: 2px solid #fff
+  }
+  .menu__item {
+    min-width: 30px;
+    margin: 10px 8px
+  }
+  .menu__link {
+    position: relative;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start
+  }
+  .menu__link:hover .menu__name {
+    display: block;
+    -webkit-transition: all .3s linear,opacity .4s ease-in;
+    -o-transition: all .3s linear,opacity .4s ease-in;
+    transition: all .3s linear,opacity .4s ease-in
+  }
+  .menu__svg {
+    margin-bottom: 0
+  }
+  .menu__name {
+    position: absolute;
+    top: 50%;
+    right: 55px;
+    display: none;
+    width: auto;
+    padding: 3px 6px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1;
+    color: #005792;
+    text-align: right;
+    background-color: #fff;
+    border: 2px solid #005792;
+    border-radius: 5px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%)
   }
 }
 .toggle-menu {

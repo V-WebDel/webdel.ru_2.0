@@ -12,6 +12,7 @@
 }
   
 html {
+  overflow-x: hidden;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
@@ -20,10 +21,10 @@ html {
   box-sizing: inherit;
 }
   
-body{
+body {
   position: relative;
   min-width: 320px;
-  overflow-x: hidden;
+  overflow: hidden;
   font-weight: 400;
   font-size: 16px;
   font-family: $font-default;
@@ -388,12 +389,61 @@ p {
 
   @include tablets {
     display: none;
+    position: fixed;
+    bottom: auto;
+    top: 80px;
+    right: 25px;
     
-    &_fixed {
+    &_show {
       display: block;
-      bottom: auto;
-      top: 80px;
-      right: 25px;
+    }
+
+    &__list {
+      flex-direction: column;
+      padding: 10px 0;
+      background-color: $blue;
+      border-radius: 15px;
+      border: 2px solid $white;
+    }
+
+    &__item {
+      min-width: 30px;
+      margin: 10px 8px;
+    }
+
+    &__link {
+      position: relative;
+      flex-direction: row-reverse;
+      justify-content: flex-start;
+
+      &:hover {
+        .menu__name {
+          display: block;
+          transition: all 0.3s linear, opacity 0.4s ease-in;
+        }
+      }
+    }
+
+    &__svg {
+      margin-bottom: 0;
+    }
+
+    &__name {
+      position: absolute;
+      top: 50%;
+      right: 55px;
+      display: none;
+      width: auto;
+      padding: 3px 6px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1;
+      color: $blue;
+      text-align: right;
+      background-color: $white;
+      border: 2px solid $blue;
+      border-radius: 5px;
+      transform: translateY(-50%);
     }
   }
 }

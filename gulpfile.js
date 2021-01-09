@@ -40,6 +40,7 @@ function scripts() {
         'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
         'node_modules/swiper/swiper-bundle.min.js',
         'app/libs/svgxuse-master/svgxuse.min.js',
+        'app/libs/swiper/swiper.min.js',
         'app/libs/GSAP/gsap.min.js',
         'app/libs/GSAP/ScrollTrigger.min.js',
     ])
@@ -68,7 +69,7 @@ function mainscripts() {
 function styles() {
     return src([ 
         'node_modules/normalize.css/normalize.css',
-        'node_modules/swiper/swiper-bundle.min.css',
+        'app/libs/swiper/swiper.min.css',
     ])
     
     // .pipe(concat('styles.min.css')) // Конкатенируем в styles.min.css
