@@ -1519,7 +1519,7 @@ p {
   bottom: -22px;
   font-size: 16px;
   font-family: Roboto,Arial,Helvetica,sans-serif;
-  color: #4dd6fc
+  color: #005792
 }
 .skill__count::before {
   content: '%';
@@ -1806,6 +1806,10 @@ p {
   flex-direction: column;
   width: 300px;
   margin: 0 auto
+}
+.form__label {
+  width: 100%;
+  margin-bottom: 10px
 }
 .form__field {
   width: 100%;

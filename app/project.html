@@ -62,7 +62,7 @@
       </div>
     </div>
   </header>
-  <button class="toggle-menu">
+  <button class="toggle-menu" aria-label="Кнопка меню">
     <span></span>
   </button>
   <section class="project section">
@@ -192,9 +192,15 @@
             </div>
             <h4 class="form__title">Форма обратной связи</h4>
             <div class="form__wrap">
-              <input class="form__field" name="name" type="text" placeholder="Ваше имя" required>
-              <input class="form__field" name="phone" type="tel" placeholder="Ваш телефон" required>
-              <textarea class="form__textarea" name="text" rows="6" placeholder="Ваш вопрос..."></textarea>
+              <label class="form__label">Ваше имя
+                <input class="form__field" name="name" type="text" placeholder="Имя" required>
+              </label>
+              <label class="form__label">Ваш телефон
+                <input class="form__field" name="phone" type="tel" placeholder="8 (000) 000-00-00" required>
+              </label>
+              <label class="form__label">Ваш вопрос
+                <textarea class="form__textarea" name="text" rows="6" placeholder="Верстка по готовому дизайну"></textarea>
+              </label>
               <button class="btn form__btn" type="submit">Отправить</button>
             </div>
             <label class="form__checkbox">
@@ -225,28 +231,28 @@
           <div class="footer__block footer__block_contacts">
             <ul class="social__list">
               <li class="social__item">
-                <a href="https://tele.click/@viktorkryzhnyi">
+                <a href="https://tele.click/@viktorkryzhnyi" aria-label="Ссылка на мой Телеграм">
                   <svg>
                     <use xlink:href="./img/sprite.svg#telegramm"></use>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
-                <a href="https://wa.me/79500122485">
+                <a href="https://wa.me/79500122485" aria-label="Ссылка на мой Whatsapp">
                   <svg>
                     <use xlink:href="./img/sprite.svg#whatsapp"></use>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
-                <a href="https://vk.com/v.kryzhny">
+                <a href="https://vk.com/v.kryzhny" aria-label="Ссылка на страницу в Вконтакте">
                   <svg>
                     <use xlink:href="./img/sprite.svg#vk"></use>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
-                <a href="mailto:viktor.webdel@gmail.com">
+                <a href="mailto:viktor.webdel@gmail.com" aria-label="Ссылка на мою электронную почту">
                   <svg>
                     <use xlink:href="./img/sprite.svg#gmail"></use>
                   </svg>

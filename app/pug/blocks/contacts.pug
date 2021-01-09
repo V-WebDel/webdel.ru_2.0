@@ -24,9 +24,12 @@ section.contacts.section#contacts
             span Отвечу в ближайшее время
           h4.form__title Форма обратной связи
           .form__wrap
-            input.form__field(name="name" type="text" placeholder="Ваше имя" required)
-            input.form__field(name="phone" type="tel" placeholder="Ваш телефон" required)
-            textarea.form__textarea(name="text" rows="6" placeholder="Ваш вопрос...")
+            label.form__label Ваше имя
+              input.form__field(name="name" type="text" placeholder="Имя" required)
+            label.form__label Ваш телефон
+              input.form__field(name="phone" type="tel" placeholder="8 (000) 000-00-00" required)
+            label.form__label Ваш вопрос
+              textarea.form__textarea(name="text" rows="6" placeholder="Верстка по готовому дизайну")
             button.btn.form__btn(type="submit") Отправить
           label.form__checkbox
             input.form__checkbox_default(type="checkbox" name="checkbox" value="ready" checked required)

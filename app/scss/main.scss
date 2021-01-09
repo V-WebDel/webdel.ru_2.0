@@ -1270,7 +1270,7 @@ p {
     bottom: -22px;
     font-size: 16px;
     font-family: $font-default;
-    color: $accent;
+    color: $blue;
 
     &::before {
       content: '%';
@@ -1543,6 +1543,11 @@ p {
     margin: 0 auto;
   }
 
+  &__label {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
   &__field {
     width: 100%;
     margin-bottom: 10px;
