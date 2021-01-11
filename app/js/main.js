@@ -66,6 +66,19 @@ $(function() {
     return false;
   });
 
+  // Show link for project
+  if ($(".project__link").attr('href') != '') {
+
+    $(".project__link").show();
+    $(".project__nolink").hide();
+
+  } else {
+
+    $(".project__link").hide();
+    $(".project__nolink").show();
+    
+  }
+
 
   if ($("body").hasClass("home")) {
 

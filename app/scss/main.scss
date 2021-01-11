@@ -1648,13 +1648,17 @@ p {
     justify-content: center;
     align-items: center;
     font-weight: 900;
-    font-size: 26px;
+    font-size: 24px;
     font-family: $font-accent;
     color: $accent;
     text-transform: uppercase;
     
     span {
-      margin: auto;
+
+      &:last-child {
+        font-size: 20px;
+        text-transform: none;
+      }
     }
 
     & ~ * {
@@ -1663,6 +1667,7 @@ p {
 
     &_active {
       display: flex;
+      flex-direction: column;
 
       & ~ * {
         opacity: .5;

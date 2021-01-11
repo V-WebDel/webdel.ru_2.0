@@ -1906,13 +1906,14 @@ p {
   -ms-flex-align: center;
   align-items: center;
   font-weight: 900;
-  font-size: 26px;
+  font-size: 24px;
   font-family: Nunito,Times,serif;
   color: #4dd6fc;
   text-transform: uppercase
 }
-.form__success span {
-  margin: auto
+.form__success span:last-child {
+  font-size: 20px;
+  text-transform: none
 }
 .form__success ~ * {
   -webkit-transition: all .5s ease;
@@ -1922,7 +1923,11 @@ p {
 .form__success_active {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column
 }
 .form__success_active ~ * {
   opacity: .5;
