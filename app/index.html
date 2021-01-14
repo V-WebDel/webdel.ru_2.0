@@ -379,32 +379,26 @@
           </ul>
         </div>
         <div class="contacts__block contacts__block_form">
+          <h4 class="form__title">Форма обратной связи</h4>
           <form class="form form_callback">
             <div class="form__success">
               <span>Спасибо за ваш вопрос</span>
               <span>Отвечу в ближайшее время</span>
             </div>
-            <h4 class="form__title">Форма обратной связи</h4>
             <div class="form__wrap">
               <label class="form__label">Ваше имя
-                <input class="form__field" name="name" type="text" placeholder="Имя" required>
+                <input class="form__field" name="name_user" type="text" placeholder="Имя" required>
               </label>
               <label class="form__label">Ваш телефон
-                <input class="form__field" name="phone" type="tel" placeholder="8 (000) 000-00-00" required>
+                <input class="form__field" name="phone_user" type="tel" placeholder="8 (000) 000-00-00" required>
               </label>
               <label class="form__label">Ваш вопрос
-                <textarea class="form__textarea" name="text" rows="6" placeholder="Верстка по готовому дизайну"></textarea>
+                <textarea class="form__textarea" name="text_user" rows="6" placeholder="Верстка по готовому дизайну"></textarea>
               </label>
-              <button class="btn form__btn" type="submit">Отправить</button>
+              <button class="btn form__btn" type="submit">Отправить </button>
+              <label class="form__label form__label_checkbox">
+                <input class="form__checkbox" type="checkbox" name="checkbox" value="ready" checked required>Нажимая на кнопку, вы даете согласие на обработку своих персональных данных</label>
             </div>
-            <label class="form__checkbox">
-              <input class="form__checkbox_default" type="checkbox" name="checkbox" value="ready" checked required>
-              <span class="form__checkbox_new">
-                <svg>
-                  <use xlink:href="./img/sprite.svg#check"></use>
-                </svg>
-              </span>Нажимая на кнопку, вы даете <a href="/personal.php">согласие на обработку своих персональных данных</a>
-            </label>
           </form>
         </div>
       </div>

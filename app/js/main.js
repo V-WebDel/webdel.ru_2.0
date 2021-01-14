@@ -2,7 +2,7 @@
 $(function() {
 	
 	// Mask form
-	$('input[name="phone"]').mask('9 (999) 999 - 99 - 99');
+	$('input[name="phone_user"]').mask('9 (999) 999 - 99 - 99');
 
 
   // Bottom up

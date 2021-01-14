@@ -18,22 +18,20 @@ section.contacts.section#contacts
             | @viktorkryzhnyi
 
       .contacts__block.contacts__block_form
+        h4.form__title Форма обратной связи
         form.form.form_callback
           .form__success
             span Спасибо за ваш вопрос
             span Отвечу в ближайшее время
-          h4.form__title Форма обратной связи
           .form__wrap
             label.form__label Ваше имя
-              input.form__field(name="name" type="text" placeholder="Имя" required)
+              input.form__field(name="name_user" type="text" placeholder="Имя" required)
             label.form__label Ваш телефон
-              input.form__field(name="phone" type="tel" placeholder="8 (000) 000-00-00" required)
+              input.form__field(name="phone_user" type="tel" placeholder="8 (000) 000-00-00" required)
             label.form__label Ваш вопрос
-              textarea.form__textarea(name="text" rows="6" placeholder="Верстка по готовому дизайну")
-            button.btn.form__btn(type="submit") Отправить
-          label.form__checkbox
-            input.form__checkbox_default(type="checkbox" name="checkbox" value="ready" checked required)
-            span.form__checkbox_new
-              +svg('check')
-            | Нажимая на кнопку, вы даете <a href="/personal.php">согласие на обработку своих персональных данных</a>
+              textarea.form__textarea(name="text_user" rows="6" placeholder="Верстка по готовому дизайну")
+            button.btn.form__btn(type="submit") Отправить 
+            label.form__label.form__label_checkbox
+              input.form__checkbox(type="checkbox" name="checkbox" value="ready" checked required)
+              | Нажимая на кнопку, вы даете согласие на обработку своих персональных данных
             

@@ -115,6 +115,17 @@ p {
 .title-text_reverse {
   color: #fff
 }
+.title-text_tax {
+  font-size: 30px;
+  color: #fff
+}
+.title-text_tax a {
+  color: #fff;
+  text-decoration: none
+}
+.title-text_tax a:hover {
+  color: #e6e6e6
+}
 @media screen and (max-width:992px) {
   .title-text {
     font-size: 30px
@@ -1807,9 +1818,19 @@ p {
   width: 300px;
   margin: 0 auto
 }
+.form__wrap br {
+  display: none
+}
 .form__label {
   width: 100%;
   margin-bottom: 10px
+}
+.form__label_checkbox {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.2;
+  color: #828282;
+  text-align: center
 }
 .form__field {
   width: 100%;
@@ -1839,57 +1860,7 @@ p {
   background-color: #005792
 }
 .form__checkbox {
-  position: relative;
-  position: relative;
-  display: block;
-  width: 300px;
-  margin: 0 auto 10px;
-  padding-left: 30px;
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 1.2;
-  color: #828282;
-  cursor: pointer
-}
-.form__checkbox_default {
-  display: none
-}
-.form__checkbox_default:checked + .form__checkbox_new svg {
-  display: block
-}
-.form__checkbox_new {
-  position: absolute;
-  left: 5px;
-  top: 0;
-  display: block;
-  width: 16px;
-  height: 16px;
-  margin-right: 9px;
-  border-radius: 4px;
-  border: 2px solid #dcdcdc
-}
-.form__checkbox_new svg {
-  position: absolute;
-  left: 75%;
-  top: 30%;
-  display: none;
-  width: 20px;
-  height: 20px;
-  fill: #005792;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%)
-}
-.form__checkbox a {
-  color: #0085df;
-  text-decoration: none;
-  -webkit-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  transition: all .3s ease
-}
-.form__checkbox a:hover {
-  color: #00395f;
-  text-decoration: none
+  margin-right: 5px
 }
 .form__success {
   display: none;
@@ -2100,15 +2071,13 @@ p {
   margin-top: 40px
 }
 .project__block_left {
-  width: 46%
+  width: 48%
 }
 .project__block_center {
-  width: 20%;
-  min-height: 2000px
+  width: 16%
 }
 .project__block_right {
-  width: 30%;
-  min-height: 1000px
+  width: 32%
 }
 .project__title {
   margin-top: 0;
@@ -2206,6 +2175,9 @@ p {
   }
   .project__block_right {
     width: 100%
+  }
+  .project__image {
+    max-width: 400px
   }
 }
 .footer {

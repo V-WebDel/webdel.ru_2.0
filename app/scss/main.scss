@@ -105,6 +105,20 @@ p {
     color: $white;
   }
 
+  &_tax {
+    font-size: 30px;
+    color: $white;
+
+    a {
+      color: $white;
+      text-decoration: none;
+
+      &:hover {
+        color: darken($white, 10%) ;
+      }
+    }
+  }
+
   @include laptop {
     font-size: 30px;
   }
@@ -1541,11 +1555,23 @@ p {
     flex-direction: column;
     width: 300px;
     margin: 0 auto;
+
+    br {
+      display: none;
+    }
   }
 
   &__label {
     width: 100%;
     margin-bottom: 10px;
+
+    &_checkbox {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 1.2;
+      color: #828282;
+      text-align: center;
+    }
   }
   
   &__field {
@@ -1580,61 +1606,7 @@ p {
   }
 
   &__checkbox {
-    position: relative;
-    position: relative;
-    display: block;
-    width: 300px;
-    margin: 0 auto 10px;
-    padding-left: 30px;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 1.2;
-    color: #828282;
-    cursor: pointer;
-  
-    &_default {
-      display: none;
-  
-      &:checked + .form__checkbox_new {
-        svg {
-          display: block;
-        } 
-      }
-    }
-
-    &_new {
-      position: absolute;
-      left: 5px;
-      top: 0;
-      display: block;
-      width: 16px;
-      height: 16px;
-      margin-right: 9px;
-      border-radius: 4px;
-      border: 2px solid #dcdcdc;
-  
-      svg {
-        position: absolute;
-        left: 75%;
-        top: 30%;
-        display: none;
-        width: 20px;
-        height: 20px;
-        fill: $blue;
-        transform: translate(-50%, -50%);
-      }
-    }
-
-    a {
-      color: lighten($blue, 15%);
-      text-decoration: none;
-      transition: $slowdown;
-
-      &:hover {
-        color: darken($blue, 10%);
-        text-decoration: none;
-      }
-    }
+    margin-right: 5px;
   }
 
   &__success {
@@ -1845,15 +1817,13 @@ p {
 
   &__block {
     &_left {
-      width: 46%;
+      width: 48%;
     }
     &_center {
-      width: 20%;
-      min-height: 2000px;
+      width: 16%;
     }
     &_right {
-      width: 30%;
-      min-height: 1000px;
+      width: 32%;
     }
   }
 
@@ -1960,6 +1930,9 @@ p {
       &_right {
         width: 100%;
       }
+    }
+    &__image {
+      max-width: 400px;
     }
   }
 }
