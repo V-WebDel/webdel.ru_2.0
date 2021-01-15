@@ -2355,8 +2355,6 @@ p {
 .error {
   position: relative;
   width: 100vw;
-  height: 100vh;
-  padding-top: 50px;
   overflow: hidden;
   background-color: #005792;
   color: #fff
@@ -2372,7 +2370,8 @@ p {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  height: 100%;
+  min-height: 650px;
+  padding-bottom: 50px;
   text-align: center
 }
 .error__title {
@@ -2388,6 +2387,36 @@ p {
   font-size: 24px;
   font-family: Nunito,Times,serif;
   line-height: 1
+}
+@media screen and (max-width:992px) {
+  .error__title {
+    margin-bottom: 20px;
+    font-size: 80px
+  }
+  .error__text {
+    font-size: 22px
+  }
+}
+@media screen and (max-width:768px) {
+  .error__title {
+    margin-bottom: 15px;
+    font-size: 60px
+  }
+  .error__text {
+    font-size: 20px
+  }
+}
+@media screen and (max-width:576px) {
+  .error__wrap {
+    min-height: 550px
+  }
+  .error__title {
+    margin-bottom: 10px;
+    font-size: 44px
+  }
+  .error__text {
+    font-size: 18px
+  }
 }
 .btn-up {
   position: fixed;

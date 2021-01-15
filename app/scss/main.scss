@@ -2077,8 +2077,6 @@ p {
 .error {
   position: relative;
   width: 100vw;
-  height: 100vh;
-  padding-top: 50px;
   overflow: hidden;
   background-color: $blue;
   color: $white;
@@ -2087,7 +2085,8 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
+    min-height: 650px;
+    padding-bottom: 50px;
     text-align: center;
   }
 
@@ -2105,6 +2104,41 @@ p {
     font-size: 24px;
     font-family: $font-accent;
     line-height: 1;
+  }
+
+  @include laptop {
+    &__title {
+      margin-bottom: 20px;
+      font-size: 80px;
+    }
+  
+    &__text {
+      font-size: 22px;
+    }
+  }
+  @include tablets {
+    &__title {
+      margin-bottom: 15px;
+      font-size: 60px;
+    }
+  
+    &__text {
+      font-size: 20px;
+    }
+  }
+  @include phones {
+    &__wrap {
+      min-height: 550px;
+    }
+
+    &__title {
+      margin-bottom: 10px;
+      font-size: 44px;
+    }
+  
+    &__text {
+      font-size: 18px;
+    }
   }
 }
 
