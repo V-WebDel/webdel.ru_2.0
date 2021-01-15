@@ -1945,35 +1945,34 @@ p {
   padding: 40px 0;
 
   &__wrap {
-    display: flex;
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-areas: "logo social" "copyright links";
     padding: 0 10%;
   }
 
-  &__column {
-    display: flex;
+  &__area {
+    width: 100%;
 
-    &_left {
-      align-items: center;
-      width: 35%;
+    &_logo {
+      grid-area: logo;
+      min-height: 80px;
     }
-
-    &_right {
+    &_social {
+      grid-area: social;
+    }
+    &_copyright {
+      grid-area: copyright;
+      display: flex;
       flex-direction: column;
-      width: 65%;
-    }
-  }
-
-  &__block {
-    display: flex;
-
-    &_contacts {
       justify-content: flex-end;
-      margin-bottom: 20px;
     }
-
-    &_payment {
-      align-items: center;
-      margin-bottom: 10px;
+    &_links {
+      grid-area: links;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
     }
   }
 
@@ -1992,7 +1991,7 @@ p {
     font-size: 12px;
   }
 
-  &__politic {
+  &__link {
     font-size: 12px;
     color: $white;
     text-decoration: none;
@@ -2004,41 +2003,41 @@ p {
   }
 
   @include laptop {
-    &__wrap, &__bottom {
+    &__wrap {
       padding: 0;
     }
   }
 
   @include tablets {
-    &__bottom {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-
-  @include phones {
     &__wrap {
-      flex-direction: column;
+      grid-template-columns: 100%;
+      grid-template-areas: "logo" "social" "links" "copyright";
     }
 
-    &__column {
-      width: 100%;
-    }
-
-    &__block {
-      &_contacts {
+    &__area {
+      &_logo {
+        min-height: auto;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      &_social {
+        margin-bottom: 20px;
+      }
+      &_copyright {
         justify-content: center;
-        margin-bottom: 0;
+      }
+      &_links {
+        align-items: center;
+        margin-bottom: 20px;
       }
     }
 
     &__logo {
       margin: 0 auto;
-      margin-bottom: 20px;
     }
 
     &__copyright {
-      margin-bottom: 10px;
+      text-align: center;
     }
   }
 }
@@ -2046,6 +2045,7 @@ p {
 .social {
   &__list {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
     @include lst;
   }
@@ -2061,6 +2061,9 @@ p {
   }
 
   @include tablets {
+    &__list {
+      justify-content: center;
+    }
     &__item {
       padding: 5px;
       margin-left: 10px;
