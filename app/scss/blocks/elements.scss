@@ -112,6 +112,10 @@ p {
   padding-top: 60px;
   padding-bottom: 40px;
 
+  &--accent {
+    background-color: $blue;
+  }
+
   @include laptop {
     padding-top: 50px;
   }
