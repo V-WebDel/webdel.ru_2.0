@@ -1,0 +1,287 @@
+.top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 160px;
+  padding-bottom: 100px;
+  overflow: hidden;
+  background-color: $blue;
+
+  &__wrap {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    font-family: $font-accent;
+    color: $white;
+    text-align: center;
+  }
+
+  &__hello {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  &__profession {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 70px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  @include laptop {
+
+    &__hello {
+      font-size: 22px;
+    }
+
+    &__profession {
+      font-size: 55px;
+    }
+  
+    &__text {
+      font-size: 24px;
+    }
+  }
+
+  @include tablets {
+
+    &__hello {
+      margin-bottom: 5px;
+    }
+
+    &__profession {
+      font-size: 46px;
+    }
+
+    &__text {
+      font-size: 20px;
+    }
+  }
+
+  @include phones {
+
+    &__hello {
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+
+    &__profession {
+      margin-bottom: 40px;
+      font-size: 36px;
+      line-height: 1;
+    }
+
+    &__text {
+      font-size: 18px;
+    }
+  }
+}
+
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  &__circle {
+    position: absolute;
+    background-color: $accent;
+    border-radius: 50%;
+    filter: blur(15px);
+    opacity: 0.3;
+  
+    &_1 {
+      bottom: 10%;
+      left: -10%;
+      width: 350px;
+      height: 350px;
+    }
+    &_2 {
+      top: 20%;
+      right: -5%;
+      width: 250px;
+      height: 250px;
+    }
+  }
+  
+  &__group {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  
+    &_1 {
+      bottom: 20%;
+      left: 0;
+    }
+    &_2 {
+      top: 20%;
+      right: 0;
+    }
+  }
+  
+  &__elem {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: $white;
+    border-radius: 50%;
+    filter: blur(5px);
+    opacity: 0.2;
+    animation-name: rotate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  
+    &_1 {
+      animation-name: rotate-1;
+      animation-duration: 15s;
+    }
+  
+    &_2 {
+      animation-name: rotate-2;
+      animation-duration: 20s;
+      animation-delay: -10s;
+    }
+  
+    &_3 {
+      width: 70px;
+      height: 70px;
+      animation-name: rotate-3;
+      animation-duration: 30s;
+    }
+  
+    &_4 {
+      background-color: $accent;
+      animation-name: rotate-2;
+      animation-duration: 25s;
+      animation-delay: -5s;
+    }
+  
+    &_5 {
+      background-color: $accent;
+      animation-name: rotate-3;
+      animation-duration: 40s;
+      animation-delay: -10s;
+    }
+  
+    &_6 {
+      width: 80px;
+      height: 80px;
+      animation-name: rotate-4;
+      animation-duration: 40s;
+    }
+  }
+  
+  &__elem-z {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: $white;
+    border-radius: 50%;
+    filter: blur(5px);
+    opacity: 0.2;
+    animation-name: zoom;
+    animation-duration: 4s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+  
+    &_1 {
+      left: 15%;
+      top: 30%;
+    }
+    &_2 {
+      left: 40%;
+      top: 80%;
+      animation-delay: -2s;
+    }
+    &_3 {
+      right: 15%;
+      top: 60%;
+      animation-delay: -4s;
+    }
+    &_4 {
+      right: 40%;
+      top: 80%;
+    }
+    &_5 {
+      left: 5%;
+      top: 10%;
+      width: 30px;
+      height: 30px;
+      animation-delay: -1s;
+    }
+    &_6 {
+      width: 30px;
+      height: 30px;
+      right: 5%;
+      top: 85%;
+      animation-delay: -2s;
+    }
+  }
+
+  @include laptop {
+    &__circle { 
+      &_1 {
+        bottom: 10%;
+        left: -20%;
+        transform: scale(0.8);
+      }
+      &_2 {
+        top: 20%;
+        right: -10%;
+        transform: scale(0.8);
+      }
+    }
+
+    &__group {    
+      &_1 {
+        left: -20%;
+      }
+      &_2 {
+        right: -20%;
+      }
+    }
+  }
+
+  @include tablets {
+    &__circle { 
+      &_1 {
+        bottom: 10%;
+        left: -25%;
+        transform: scale(0.6);
+      }
+      &_2 {
+        top: 20%;
+        right: -20%;
+        transform: scale(0.6);
+      }
+    }
+  }
+
+  @include phones {
+    &__circle { 
+      &_1 {
+        left: -50%;
+      }
+
+      &_2 {
+        display: none;
+      }
+    }
+
+    &__group {
+      &_2 {
+        display: none;
+      }
+    }
+  }
+}

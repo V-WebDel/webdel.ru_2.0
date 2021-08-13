@@ -1,0 +1,172 @@
+.btn {
+  display: block;
+  padding: 10px 40px;
+  font-weight: 400;
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: $accent;
+  border: 2px solid #ffffff;
+  border-radius: 30px;
+  transition: $slowdown;
+  cursor: pointer;
+
+  &:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: darken($accent, 10%);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+p {
+  margin-top: 0;
+}
+
+.title-text {
+  position: relative;
+  margin-bottom: 0;
+  font-size: 34px;
+  font-family: $font-accent;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+
+  &_reverse {
+    color: $white;
+  }
+
+  &_tax {
+    font-size: 30px;
+    color: $white;
+
+    a {
+      color: $white;
+      text-decoration: none;
+
+      &:hover {
+        color: darken($white, 10%);
+      }
+    }
+  }
+
+  @include laptop {
+    font-size: 30px;
+  }
+
+  @include phones {
+    font-size: 28px;
+  }
+}
+
+.text-accent {
+  color: $accent;
+}
+
+.text-black {
+  font-weight: 900;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+/* grid */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @include desktop {
+    max-width: 960px;
+  }
+
+  @include laptop {
+    max-width: 760px;
+    padding: 0 10px;
+  }
+
+  @include tablets {
+    max-width: 540px;
+  }
+
+  @include phones {
+    max-width: 320px;
+  }
+}
+
+/* section */
+.section {
+  padding-top: 60px;
+  padding-bottom: 40px;
+
+  @include laptop {
+    padding-top: 50px;
+  }
+
+  @include tablets {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+
+  @include phones {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+}
+
+/* btn-up */
+.btn-up {
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+  z-index: 100;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: all 0.3s ease;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: $accent;
+    transition: $slowdown;
+  }
+
+  &_active {
+    opacity: 1;
+    animation-name: jump-btn;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: easy;
+  }
+
+  &:hover {
+    animation-play-state: paused;
+
+    svg {
+      fill: lighten($accent, 20%);
+      transform: scale(1.2);
+    }
+  }
+
+  @include phones {
+    bottom: 20px;
+    left: 20px;
+  }
+}
